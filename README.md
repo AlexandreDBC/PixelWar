@@ -25,4 +25,4 @@ An interactive client-server collaborative "Pixel War" application developed in 
 * **Networking:** Java Sockets (`Socket`, `ServerSocket`, `MulticastSocket`, `DatagramPacket`)
 * **Concurrency:** `ExecutorService`, Multithreading, `synchronized` mechanisms, JavaFX concurrency (`Platform.runLater`)
 
-![Aperçu du jeu Pixel War](images/pixel-war-demo.png)
+![Aperçu du jeu Pixel War](PixelWar.png)
