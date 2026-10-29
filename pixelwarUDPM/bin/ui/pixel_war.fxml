@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="807.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UIControllerUDP">
+   <left>
+      <VBox fillWidth="false" prefHeight="600.0" prefWidth="177.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="481.0" prefWidth="173.0">
+               <children>
+                  <FlowPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Connexion">
+                           <FlowPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                           </FlowPane.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                     </children>
+                  </FlowPane>
+                  <FlowPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Pseudo : ">
+                           <FlowPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" />
+                           </FlowPane.margin></Label>
+                        <TextField fx:id="pseudo_field">
+                           <FlowPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </FlowPane.margin></TextField>
+                     </children>
+                  </FlowPane>
+                  <FlowPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Adresse du serveur : ">
+                           <FlowPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </FlowPane.margin></Label>
+                        <TextField fx:id="addresse_field">
+                           <FlowPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </FlowPane.margin></TextField>
+                     </children>
+                  </FlowPane>
+                  <FlowPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Port : ">
+                           <FlowPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </FlowPane.margin></Label>
+                        <TextField fx:id="port_field">
+                           <FlowPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </FlowPane.margin></TextField>
+                     </children>
+                  </FlowPane>
+                  <FlowPane columnHalignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="connexion_btn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#connexion_btn_clic" text="Connexion">
+                           <FlowPane.margin>
+                              <Insets bottom="10.0" left="10.0" top="5.0" />
+                           </FlowPane.margin></Button>
+                     </children>
+                  </FlowPane>
+                  <FlowPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Etat de la connexion : ">
+                           <FlowPane.margin>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                           </FlowPane.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="etat_connexion_label" text="Inconnu">
+                           <FlowPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </FlowPane.margin></Label>
+                     </children>
+                  </FlowPane>
+                  <FlowPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="deconnexion_btn" mnemonicParsing="false" onAction="#deconnexion_btn_clic" text="Deconnexion">
+                           <FlowPane.margin>
+                              <Insets bottom="20.0" left="10.0" right="10.0" top="5.0" />
+                           </FlowPane.margin></Button>
+                     </children>
+                  </FlowPane>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin></Separator>
+                  <Label fx:id="timer" alignment="CENTER" text="00 : 00">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin></Label>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Separator>
+                  <FlowPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Couleur sélectionnée : ">
+                           <FlowPane.margin>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </FlowPane.margin></Label>
+                        <Rectangle fx:id="couleur_choisie_rect" arcHeight="5.0" arcWidth="5.0" fill="#b7c7d7" height="20.0" stroke="BLACK" strokeType="INSIDE" width="20.0">
+                           <FlowPane.margin>
+                              <Insets right="10.0" top="20.0" />
+                           </FlowPane.margin></Rectangle>
+                     </children>
+                  </FlowPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <ColorPicker fx:id="color_picker_btn" onAction="#color_picker_btn_select" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets left="10.0" right="10.0" top="5.0" />
+                           </BorderPane.margin></ColorPicker>
+                     </top>
+                  </BorderPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <GridPane fx:id="grille" gridLinesVisible="true" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+   </center>
+</BorderPane>
