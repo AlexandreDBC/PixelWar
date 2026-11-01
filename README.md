@@ -1,6 +1,8 @@
 # 🎨 Pixel War - Distributed Real-Time Collaborative Grid
 
-[![Projet Personnel](https://img.shields.io/badge/Type-Projet%20Personnel-blueviolet?style=for-the-badge&logo=github)](https://github.com/AlexandreDBC)
+[![Personal Project](https://img.shields.io/badge/Type-Personal%20Project-blueviolet?style=for-the-badge&logo=github)](https://github.com/AlexandreDBC)
+[![Academic Project](https://img.shields.io/badge/Type-Academic%20Project-blue?style=for-the-badge)](https://github.com/AlexandreDBC)
+[![Academic Project](https://img.shields.io/badge/Type-Academic%20Project-1E88E5?style=for-the-badge&logo=readthedocs&logoColor=white)](https://github.com/AlexandreDBC)
 
 An interactive client-server collaborative "Pixel War" application developed in **Java** using **JavaFX** for the graphical user interface. The project demonstrates a strong command of network programming, concurrency management, and dual networking architectures implemented in both **TCP** and **UDP Multicast**.
 
